@@ -30,15 +30,22 @@ body{
     width: 100%;
 
     display: flex;
+    align-items: start;
     flex-direction: column;
     gap: 1rem;
+}
+
+#colorBox{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
 #color{
     height: 50px;
     width: 50px;
 
-    border: 2px solid black;
+    border: 2px solid blue;
 }
 
 #sizeBox{
@@ -54,17 +61,36 @@ body{
 }
 
 .size{
-    border: 2px solid black;
+    border: 2px dashed grey;
     padding: .5rem;
 
+    cursor: pointer;
+
     &.contain{
-        border-color: green;
+        border-style: solid;
+        border-color: black;
+    }
+
+    &.selected{
+        border-color: blue;
     }
 }
 
 #buttonBox{
+    margin-top: 2rem;
+
+    width: 100%;
+
     display: flex;
     flex-direction: column;
+    gap: .5rem;
+
+    & button{
+        height: 4rem;
+        width: 100%;
+
+        font-size: 1.25rem;
+    }
 }
 
 @media (max-width: 900px){
